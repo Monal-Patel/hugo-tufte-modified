@@ -1,17 +1,17 @@
 <footer class="page-footer">
 		<hr>
 
-    <div class="previous-post" style="display:inline-block;">
+    <!-- <div class="previous-post" style="display:inline-block;">
       {{ if .PrevPage }}
       <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">« {{ .PrevPage.Title | truncate 50 "..."}}</a>
       {{ end }}
-    </div>
+    </div> -->
 
-    <div class="next-post", style="display:inline-block;float:right;">
+    <!-- <div class="next-post", style="display:inline-block;float:right;">
       {{ if .NextPage }}
       <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">{{ .NextPage.Title | truncate 50 "..." }} »</a>
       {{ end }}
-    </div>
+    </div> -->
 
 		<ul class="page-footer-menu">
 
@@ -32,30 +32,6 @@
       <li><a href="https://www.patreon.com/{{.Site.Params.patreon}}"><i class='fab fa-patreon la-lg'></i></a></li>
       {{ end }}
 
-      {{ if isset .Site.Params "youtube" }}
-      <li><a href="https://www.youtube.com/{{.Site.Params.youtube}}"><i class='fab fa-youtube la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "medium" }}
-      <li><a href="https://medium.com/{{.Site.Params.medium}}"><i class='fab fa-medium la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "reddit" }}
-      <li><a href="https://www.reddit.com/user/{{.Site.Params.reddit}}"><i class='fab fa-reddit la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "stackoverflow" }}
-      <li><a href="https://stackoverflow.com/users/{{.Site.Params.stackoverflow}}?tab=profile"><i class='fab fa-stack-overflow la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "instagram" }}
-      <li><a href="https://www.instagram.com/{{.Site.Params.instagram}}"><i class='fab fa-instagram la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "mastodon" }}
-      <li><a href="https://{{.Site.Params.mastodon}}"><i class='fab fa-mastodon la-lg'></i></a></li>
-      {{ end }}
-
       {{ if isset .Site.Params "orcid" }}
       <li><a href="https://orcid.org/{{.Site.Params.orcid}}"><i class='fab fa-orcid la-lg'></i></a></li>
       {{ end }}
@@ -68,13 +44,6 @@
         <li><a href="{{.URL}}">{{.Pre }} {{ .Name }}</a></li>
       {{ end }}
 		</ul>
-
-  {{ if .Site.Params.showPoweredBy}}
-    <p>
-      Powered by <a href="https://gohugo.io">Hugo</a> and the
-      <a href="https://github.com/slashformotion/hugo-tufte">Tufte theme</a>.
-    </p>
-  {{ end }}
 
 	<div class="copyright">
 	<p>

@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-    {{- partial "header.html" . -}}
-
-    <body >
-        {{ block "main" . }}{{ end }}
-    </body>
-
+  <head>
+    {{- partial "head.html" . -}}
+  </head>
+  <body>
+    <div class="flex flex-row-2 h-screen w-screen absolute left-0">
+      <aside class="flex-none min-w-fit pl-4 pr-2 border-r">
+        <div class="text-4xl font-black pt-8 pb-2 text-left w-max">
+          MP
+        </div>
+          {{- partial "nav.html" . -}}
+      </aside>
+      <main class="flex-grow p-2 border-none align-top">
+          {{block "main" . }}{{ end }}
+      </main>
+    </div>
+  </body>
 </html>

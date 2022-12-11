@@ -5,15 +5,13 @@
 */}}
 
 {{ define "main" }}
-<div id="layout" class="pure-g">
-  <article class="pure-u-1">
-    {{ partial "brand.html" . }}
+<title>{{ .Title  }}</title>
+<article class="align-top text-4xl w-full">
     {{ partial "content.header.html" . }}
     {{ partial "toc.html" . }}
-    <section>{{ .Content }}</section>
+    <section class="w-screen">{{ .Content }}</section>
     <section>
       {{ partial "footer.html" . }}
     </section>
-  </article>
-</div>
+</article>
 {{ end }}
