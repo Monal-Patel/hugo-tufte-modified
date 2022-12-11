@@ -1,0 +1,10 @@
+/* Tufte */
+@import "tufte.css";
+
+/* Font awesome */
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css";
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

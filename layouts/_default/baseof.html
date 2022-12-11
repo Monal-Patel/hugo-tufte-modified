@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    {{- partial "head.html" . -}}
+    <title>{{ .Site.Title }} - {{ .Title  }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }} ">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="{{"favicon/favicon.ico" | relURL}}">
+
+    <!-- Load Katex, if necessary. -->
+    {{ if or .Params.math .IsHome }}
+      {{ partial "math.html" . }}
+    {{ end }}
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="/css/output.css">
   </head>
   <body>
     <div class="flex flex-row-2 h-fit w-screen absolute left-0">
