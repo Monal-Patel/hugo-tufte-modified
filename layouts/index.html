@@ -1,23 +1,9 @@
 {{ define "main" }}
-<div id="layout" class="pure-g">
-  <article class="pure-u-1">
-    {{ range where .Site.RegularPages "Type" "post"}}
-    
-        <h1 class="content-title">
-          {{ if .IsNode }}
-          <a href="{{ .Permalink }}">{{ .Title}}</a>
-          {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
-          {{ end }}
-        </h1>
-
-        <p>{{ truncate 120  .Summary }}</p>
-        {{/*  {{ if .Truncated }}  */}}
-        <p><a href="{{ .RelPermalink  }}">Read On &rarr;</a></p>
-        {{/*  {{ end }}  */}}
-
-    {{ end  }}
-    {{ partial "footer.html" . }}
-  </article>
-</div>
+<article class="align-top text-2xl w-full">
+    {{ partial "content.header.html" . }}
+    <section class="p-4">{{ .Content }}</section>
+    <section>
+      {{ partial "footer.html" . }}
+    </section>
+</article>
 {{ end }}

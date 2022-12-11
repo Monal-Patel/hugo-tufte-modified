@@ -1,5 +1,6 @@
-<footer class="page-footer">
-		<hr>
+<!-- <footer class="page-footer"> -->
+<footer class="text-sm align-bot border-t left-0 p-0">
+		<!-- <hr> -->
 
     <!-- <div class="previous-post" style="display:inline-block;">
       {{ if .PrevPage }}
@@ -13,40 +14,8 @@
       {{ end }}
     </div> -->
 
-		<ul class="page-footer-menu">
 
-      {{/* SOCIALS */}}
-      {{ if isset .Site.Params "twitter" }}
-      <li><a href="https://twitter.com/{{.Site.Params.twitter}}"><i class='fab fa-twitter fa-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "github" }}
-      <li><a href="https://github.com/{{.Site.Params.github}}"><i class='fab fa-github fa-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "gitlab" }}
-      <li><a href="https://gitlab.com/{{.Site.Params.gitlab}}"><i class='fab fa-gitlab fa-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "patreon" }}
-      <li><a href="https://www.patreon.com/{{.Site.Params.patreon}}"><i class='fab fa-patreon la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "orcid" }}
-      <li><a href="https://orcid.org/{{.Site.Params.orcid}}"><i class='fab fa-orcid la-lg'></i></a></li>
-      {{ end }}
-
-      {{ if isset .Site.Params "google_scholar" }}
-      <li><a href="https://scholar.google.com/citations?user={{.Site.Params.google_scholar}}"><i class='fas fa-graduation-cap la-lg'></i></a></li>
-      {{ end }}
-      {{/* END SOCIALS */}}
-      {{ range .Site.Menus.footer }}
-        <li><a href="{{.URL}}">{{.Pre }} {{ .Name }}</a></li>
-      {{ end }}
-		</ul>
-
-	<div class="copyright">
-	<p>
+	<!-- <div class="text-sm align-bot border-t left-0 p-0"> -->
     {{ with .Site.Params.copyright }}
       {{ . | safeHTML }}
     {{ else }}
@@ -54,6 +23,5 @@
     {{ with .Site.Params.copyrightHolder }}{{ . }}{{end}}.
     All rights reserved.
     {{end}}
-  </p>
-</div>
+<!-- </div> -->
 </footer>

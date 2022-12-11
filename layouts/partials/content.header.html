@@ -1,14 +1,7 @@
-<!-- <section> -->
-  
-    {{ if .IsNode }}
-    <a href="{{ .Permalink }}">{{ .Title}}</a>
-    {{ else }}
-    <p class="text-4xl absolute item-top top-0 mt-6 mb-2 mx-4" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</p>
-    {{ end }}
+  <p class="text-4xl absolute item-top top-0 mt-6 mb-2 mx-4" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</p>
     
-  <!-- <section class="flex mx-4 my-2 text-4xl w-full"> -->
-  <div class="mx-4 mt-2 mb-0 w-full content-meta ">
   {{ if .IsPage }}
+  <div class="mx-4 mt-2 mb-0 w-full content-meta ">
     {{ if or (eq .Type "post") (.Params.meta)  }}
         {{ if .Params.subtitle }}
           <p class=subtitle>{{ .Params.subtitle }}</p>
@@ -31,6 +24,5 @@
     
         {{ end }}
     {{ end }}
-  {{ end }}
   </div>
-    <!-- </section> -->
+  {{ end }}

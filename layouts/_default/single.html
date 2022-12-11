@@ -1,15 +1,9 @@
-{{/*  
-
-  This template render single pages 
-
-*/}}
-
 {{ define "main" }}
 <title>{{ .Title  }}</title>
 <article class="align-top text-4xl w-full">
     {{ partial "content.header.html" . }}
     {{ partial "toc.html" . }}
-    <section class="w-screen">{{ .Content }}</section>
+    <section class="p-4 w-screen">{{ .Content }}</section>
     <section>
       {{ partial "footer.html" . }}
     </section>
