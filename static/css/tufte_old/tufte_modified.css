@@ -1,43 +1,16 @@
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
-@font-face {
-    font-family: "et-book";
-    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "et-book";
-    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "et-book";
-    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
+/* @font-face {
     font-family: "et-book-roman-old-style";
     src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
     src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 /* Tufte CSS styles */
 html {
@@ -49,7 +22,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 12.5%;
-    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-family: et-book,serif; 
     background-color: #fffff8;
     color: #111;
     max-width: 1400px;
@@ -130,11 +103,12 @@ p,
 dl,
 ol,
 ul {
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     line-height: 2rem;
 }
 
 p {
+    font-size:1.0rem;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     padding-right: 0;
@@ -238,7 +212,7 @@ a:visited {
     text-shadow: unset;
 }
 
-a:link, .tufte-underline, .hover-tufte-underline:hover {
+/* a:link, .tufte-underline, .hover-tufte-underline:hover {
     text-decoration: none;
     background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
     background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
@@ -248,7 +222,7 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
     background-repeat: no-repeat, no-repeat, repeat-x;
     text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
     background-position: 0% 93%, 100% 93%, 0% 93%;
-}
+} */
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     a:link, .tufte-underline, .hover-tufte-underline:hover {
@@ -256,18 +230,11 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
     }
 }
 
-/* Adds dark mode */
-@media (prefers-color-scheme: dark) {
-    a:link, .tufte-underline, .hover-tufte-underline:hover {
-        text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
-    }
-}
-
-a:link::selection,
+/* a:link::selection,
 a:link::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe;
-}
+} */
 
 /* Sidenotes, margin notes, figures, captions */
 img {
@@ -484,3 +451,113 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 }
+
+/* ------------------------------------------------------------------------ */
+/* hugo-tufte.css */
+/* Contains extensions to the original tufte.css styles to */
+/* accomodate a blog-like site. */
+/* ------------------------------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@351&display=swap");
+
+/* When setting the primary font stack, apply it to the Pure grid units along */
+/* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
+/* specific font stacks to ensure the greatest OS/browser compatibility. */
+/* html,
+button,
+input,
+select,
+textarea,
+p,
+nav,
+section,
+article,
+header,
+footer,
+.pure-g [class*="pure-u"] {
+    font-family: "et-book", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Open Sans", "Helvetica Neue", "Lucida Grand", sans-serif;
+} */
+
+p {
+    text-align: justify;
+}
+
+code {
+    font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.sidenote,
+.marginnote {
+    margin-right: -55%;
+    width: 45%;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* Generic content, such as the index list pages */
+/* ------------------------------------------------------------------------ */
+
+/* Content Title styling.  This is mostly to avoid underlying links. */
+/* h1.content-title {
+    font-size: 3rem;
+}
+h1.content-title a:link,
+h1.content-title a:visited {
+    background: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+h1.content-title a:hover,
+h1.content-title a:focus {
+    color: darkgray;
+} */
+
+
+
+/* ------------------------------------------------------------------------ */
+/* Styling for listing pages. */
+/* ------------------------------------------------------------------------ */
+/* .list-page {
+    ul {
+        list-style-type: none;
+        margin: -0.25em;
+        width: 87.5%;
+        max-width: 45rem;
+    }
+    li {
+        margin: 0;
+    }
+}
+.list-page .list-date {
+    display: inline;
+    font-size: 0.75em;
+}
+
+table:not(.lntable) {
+    margin-top: 1em;
+    font-size: 1.4rem;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+}
+
+table:not(.lntable) th,
+table:not(.lntable) td {
+    font-size: 1.25rem;
+    line-height: 1.71428571;
+}
+
+table:not(.lntable) td {
+    padding-right: 0.75em;
+}
+
+table.lntable {
+    td.lntd {
+        padding: 0em;
+    }
+    border-spacing: 0;
+    padding: 0;
+} */
+

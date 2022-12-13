@@ -1,18 +1,21 @@
-{{ range .Site.Menus.nav  }}
-  <a class="no-underline text-xl flex items-left p-0 text-gray-600 rounded-md hover:bg-gray-100" href="{{ .URL }}">{{ .Name }}</a> 
-{{ end }}
 
-<div class="grid pt-8 grid-rows-3 text-center no-underline">
+<div class="text-xl py-2 border-b grid-rows-3 text-center">
+{{ range .Site.Menus.nav  }}
+  <a class="flex w-max py-2 text-black rounded-md hover:bg-gray-100" href="{{ .URL }}">{{ .Name }}</a> 
+{{ end }}
+</div>
+
+<div class="text-2xl grid py-2 pr-2 border-t grid-rows-3 text-center">
   {{ if isset .Site.Params "github" }}
-  <a href="https://github.com/{{.Site.Params.github}}" style="text-decoration:none" ><div class='fab fa-github fa-lg'></div></a>
+  <a href="https://github.com/{{.Site.Params.github}}" style="text-decoration:none" ><div class='fab fa-github fa-lg py-2'></div></a>
   {{ end }}
 
   {{ if isset .Site.Params "orcid" }}
-  <a href="https://orcid.org/{{.Site.Params.orcid}}"><div class='fab fa-orcid la-lg'></div></a>
+  <a href="https://orcid.org/{{.Site.Params.orcid}}"><div class='fab fa-orcid la-lg py-2'></div></a>
   {{ end }}
 
   {{ if isset .Site.Params "google_scholar" }}
-  <a href="https://scholar.google.com/citations?user={{.Site.Params.google_scholar}}"><i class='fas fa-graduation-cap'></i></a>
+  <a href="https://scholar.google.com/citations?user={{.Site.Params.google_scholar}}"><i class='fas fa-graduation-cap py-2'></i></a>
   {{ end }}
 
   {{ range .Site.Menus.footer }}

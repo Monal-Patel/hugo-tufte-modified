@@ -1,4 +1,7 @@
-  <p class="text-4xl absolute item-top top-0 mt-6 mb-2 mx-4" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</p>
+
+  <div class="grid relative top-0 w-full">
+    <h1 class="-mt-0 align-top p-2" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</h1>
+  </div>
     
   {{ if .IsPage }}
   <div class="mx-4 mt-2 mb-0 w-full content-meta ">

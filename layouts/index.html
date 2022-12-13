@@ -1,9 +1,13 @@
 {{ define "main" }}
-<article class="align-top text-2xl w-full">
-    {{ partial "content.header.html" . }}
-    <section class="p-4">{{ .Content }}</section>
-    <section>
+  <!-- <section class="flex-none w-full h-fit"> -->
+    <h1 class="mt-0 p-2 h-fit" href="{{ .RelPermalink }}">{{ .Title }}</h1>
+  <!-- </section> -->
+    <!-- {{ partial "content.header.html" . }} -->
+    <!-- <section class="flex-grow grid w-full h-fit p-2"> -->
+      {{ .Content }}
+    <!-- </section> -->
+    <footer class="flex-none w-full">
       {{ partial "footer.html" . }}
-    </section>
+    </footer>
 </article>
 {{ end }}
